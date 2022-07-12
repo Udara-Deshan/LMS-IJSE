@@ -178,7 +178,6 @@ public class StudentController implements Initializable {
             allStudentData.clear();
             for (StudentDTO studentDTO : students) {
                 if (studentDTO!= null) {
-                    System.out.println(studentDTO.toString());
                     allStudentData.add(studentDTO);
                 }
             }
