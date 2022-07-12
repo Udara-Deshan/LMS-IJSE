@@ -5,16 +5,16 @@ package dto;
  * @since : 7/12/2022
  **/
 public class StudentDTO {
-    String id;
-    String name;
+    String studentId;
+    String studentName;
     String email;
     String contact;
     String address;
     String nic;
 
-    public StudentDTO(String id, String name, String email, String contact, String address, String nic) {
-        this.id = id;
-        this.name = name;
+    public StudentDTO(String studentId, String studentName, String email, String contact, String address, String nic) {
+        this.studentId = studentId;
+        this.studentName = studentName;
         this.email = email;
         this.contact = contact;
         this.address = address;
@@ -25,20 +25,20 @@ public class StudentDTO {
 
     }
 
-    public String getId() {
-        return id;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getName() {
-        return name;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     public String getEmail() {

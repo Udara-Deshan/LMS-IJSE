@@ -17,8 +17,8 @@ public class StudentDAOImpl implements StudentDAO {
     public boolean add(Student entity) throws Exception {
         String sql = "INSERT INTO student VALUES(?,?,?,?,?,?)";
         return CrudOperation.executeUpdate(sql,
-                entity.getId(),
-                entity.getName(),
+                entity.getStudentId(),
+                entity.getStudentName(),
                 entity.getEmail(),
                 entity.getContact(),
                 entity.getAddress(),
@@ -43,8 +43,8 @@ public class StudentDAOImpl implements StudentDAO {
         String sql = "UPDATE student SET studentId=?,studentName=?,email=?,contact=?,address =?, nic=? WHERE studentId=?";
         return CrudOperation.executeUpdate(
                 sql,
-                entity.getId(),
-                entity.getName(),
+                entity.getStudentId(),
+                entity.getStudentName(),
                 entity.getEmail(),
                 entity.getContact(),
                 entity.getAddress(),
@@ -55,7 +55,7 @@ public class StudentDAOImpl implements StudentDAO {
     @Override
     public ArrayList<Student> search(Student entity) throws Exception {
         String sql = "SELECT * FROM student WHERE studentId LIKE ?";
-        ResultSet rs = CrudOperation.executeQuery(sql, entity.getId());
+        ResultSet rs = CrudOperation.executeQuery(sql, entity.getStudentId());
         return getStudents(rs);
     }
 

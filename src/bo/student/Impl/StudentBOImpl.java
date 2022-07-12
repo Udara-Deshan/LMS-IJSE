@@ -37,8 +37,8 @@ public class StudentBOImpl implements StudentBO {
 
     private Student makeStudent(StudentDTO studentDTO) {
         Student student = new Student(
-                studentDTO.getId(),
-                studentDTO.getName(),
+                studentDTO.getStudentId(),
+                studentDTO.getStudentName(),
                 studentDTO.getEmail(),
                 studentDTO.getContact(),
                 studentDTO.getAddress(),
@@ -49,8 +49,8 @@ public class StudentBOImpl implements StudentBO {
 
     private StudentDTO makeStudentDTO(Student student) {
         return new StudentDTO(
-                student.getId(),
-                student.getName(),
+                student.getStudentId(),
+                student.getStudentName(),
                 student.getEmail(),
                 student.getContact(),
                 student.getAddress(),

@@ -125,8 +125,8 @@ public class StudentController implements Initializable {
 
     private StudentDTO setStudentDTO() {
         StudentDTO studentDTO=new StudentDTO();
-        studentDTO.setId(txtSid.getText());
-        studentDTO.setName(txtName.getText());
+        studentDTO.setStudentId(txtSid.getText());
+        studentDTO.setStudentName(txtName.getText());
         studentDTO.setEmail(txtEmail.getText());
         studentDTO.setContact(txtContact.getText());
         studentDTO.setAddress(txtAddress.getText());
@@ -153,15 +153,18 @@ public class StudentController implements Initializable {
         contact.setCellValueFactory(new PropertyValueFactory<>("contact"));
         address.setCellValueFactory(new PropertyValueFactory<>("address"));
         nic.setCellValueFactory(new PropertyValueFactory<>("nic"));
+        tblStudent.setItems(allStudentData);
     }
 
     private void loadStudentData() {
         try {
             StudentBO studentBO = (StudentBO) BOFactory.getBOFactory().getSuperBO(BOFactory.BOType.STUDENT);
             ArrayList<StudentDTO> students = studentBO.getAllStudents();
+
             allStudentData.clear();
             for (StudentDTO studentDTO : students) {
                 if (studentDTO!= null) {
+                    System.out.println(studentDTO.toString());
                     allStudentData.add(studentDTO);
                 }
             }
