@@ -21,6 +21,10 @@ public class StudentDTO {
         this.nic = nic;
     }
 
+    public StudentDTO() {
+
+    }
+
     public String getId() {
         return id;
     }

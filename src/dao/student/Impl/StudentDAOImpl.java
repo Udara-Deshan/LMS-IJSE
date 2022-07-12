@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class StudentDAOImpl implements StudentDAO {
     @Override
     public boolean add(Student entity) throws Exception {
-        String sql = "INSERT INTO student VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO student VALUES(?,?,?,?,?,?)";
         return CrudOperation.executeUpdate(sql,
                 entity.getId(),
                 entity.getName(),
