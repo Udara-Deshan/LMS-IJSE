@@ -82,7 +82,21 @@ public class StudentController implements Initializable {
 
     @FXML
     void OnDelete(ActionEvent event) {
-
+        StudentBO studentBO = (StudentBO) BOFactory.getBOFactory().getSuperBO(BOFactory.BOType.STUDENT);
+        boolean status = false;
+        try {
+            status = studentBO.deleteStudent(txtSid.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (status) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Student");
+            alert.setHeaderText(null);
+            alert.setContentText("Student Deleted successfully");
+            alert.showAndWait();
+            clear();
+        }
     }
 
     @FXML
