@@ -33,25 +33,25 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Pane id="form" layoutX="32.0" layoutY="110.0" prefHeight="305.0" prefWidth="860.0" style="-fx-background-radius: 5px;" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
+      <Pane id="form" layoutX="32.0" layoutY="110.0" prefHeight="305.0" prefWidth="860.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0">
          <children>
             <VBox prefHeight="229.0" prefWidth="430.0" spacing="20.0">
                <children>
                   <Pane>
                      <children>
-                        <TextField layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="SID" />
+                        <TextField fx:id="txtSid" layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="SID" />
                         <Label layoutX="1.0" prefHeight="17.0" prefWidth="131.0" text="Student ID" />
                      </children>
                   </Pane>
                   <Pane>
                      <children>
-                        <TextField layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Email" />
+                        <TextField fx:id="txtEmail" layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Email" />
                         <Label layoutX="1.0" prefHeight="17.0" prefWidth="131.0" text="Student Email" />
                      </children>
                   </Pane>
                   <Pane>
                      <children>
-                        <TextField layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Address" />
+                        <TextField fx:id="txtAddress" layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Address" />
                         <Label layoutX="1.0" prefHeight="17.0" prefWidth="131.0" text="Student Address" />
                      </children>
                   </Pane>
@@ -64,19 +64,19 @@
                <children>
                   <Pane prefWidth="419.0">
                      <children>
-                        <TextField layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Name" />
+                        <TextField fx:id="txtName" layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Name" />
                         <Label layoutX="1.0" prefHeight="17.0" prefWidth="131.0" text="Student Name" />
                      </children>
                   </Pane>
                   <Pane>
                      <children>
-                        <TextField layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Contact" />
+                        <TextField fx:id="txtContact" layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="Contact" />
                         <Label layoutX="1.0" prefHeight="17.0" prefWidth="131.0" text="Student Contact" />
                      </children>
                   </Pane>
                   <Pane>
                      <children>
-                        <TextField layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="NIC" />
+                        <TextField fx:id="txtNIC" layoutY="18.0" prefHeight="31.0" prefWidth="277.0" text="NIC" />
                         <Label layoutX="1.0" prefHeight="17.0" prefWidth="131.0" text="Student NIC" />
                      </children>
                   </Pane>
@@ -87,9 +87,9 @@
             </VBox>
             <HBox id="buton-bar" alignment="CENTER" layoutX="560.0" layoutY="260.0" prefHeight="31.0" prefWidth="286.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="83.0" prefWidth="80.0" styleClass="btn-form" text="Save" />
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="80.0" styleClass="btn-form" text="Update" />
-                  <Button layoutX="90.0" layoutY="10.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="80.0" styleClass="btn-form" text="Delete" />
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSave" prefHeight="83.0" prefWidth="80.0" styleClass="btn-form" text="Save" />
+                  <Button fx:id="btnUpdate" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="83.0" prefWidth="80.0" styleClass="btn-form" text="Update" />
+                  <Button fx:id="btnDelete" layoutX="90.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnDelete" prefHeight="83.0" prefWidth="80.0" styleClass="btn-form" text="Delete" />
                </children>
                <cursor>
                   <Cursor fx:constant="HAND" />
